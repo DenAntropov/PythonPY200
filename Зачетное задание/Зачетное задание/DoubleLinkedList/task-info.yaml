@@ -36,5 +36,8 @@ files:
     if __name__ == "__main__":
         ...
   learner_created: false
+- name: test_list.py
+  visible: true
+  learner_created: true
 status: Unchecked
 record: -1

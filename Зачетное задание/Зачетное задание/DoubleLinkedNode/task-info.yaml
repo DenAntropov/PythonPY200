@@ -48,5 +48,8 @@ files:
             # todo test set next
             ...
   learner_created: false
+- name: test_node.py
+  visible: true
+  learner_created: true
 status: Unchecked
 record: -1

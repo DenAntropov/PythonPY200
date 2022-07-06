@@ -71,3 +71,9 @@ class LinkedList:
 
 
 # TODO Реализовать класс DoubleLinkedList
+    class _Node:
+        def __init__(self, value, _next=None):
+            self.value, self._next = value, _next
+
+        def __str__(self):
+            return str(self.value)

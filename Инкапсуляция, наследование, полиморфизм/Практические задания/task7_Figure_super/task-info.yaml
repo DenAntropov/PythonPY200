@@ -9,13 +9,13 @@ files:
   visible: true
   placeholders:
   - offset: 202
-    length: 42
+    length: 27
     placeholder_text: '# TODO вызвать конструктор базового класса'
     initial_state:
       length: 42
       offset: 202
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
     encrypted_possible_answer: super().__init__(name=name)
   text: |
@@ -42,4 +42,9 @@ files:
   visible: false
   learner_created: false
 status: Unchecked
+feedback:
+  message: |-
+    No Python interpreter
+    For more information, see <a href="https://plugins.jetbrains.com/plugin/10081-edutools/docs/troubleshooting-guide.html#no_tests_have_run">the Troubleshooting guide</a>
+  time: Wed, 29 Jun 2022 10:02:32 UTC
 record: -1
