@@ -17,14 +17,14 @@ files:
         def test_add(self):
             ...
   learner_created: false
-- name: test_list.py
-  visible: true
-  learner_created: true
 - name: node.py
   visible: true
   text: |
     ...
   learner_created: false
+- name: test_list.py
+  visible: true
+  learner_created: true
 - name: task.py
   visible: true
   text: |
