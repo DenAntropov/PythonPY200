@@ -18,7 +18,7 @@ files:
       offset: 238
     initialized_from_dependency: false
     selected: false
-    status: Solved
+    status: Failed
     encrypted_possible_answer: |-
       def __init__(self, a, b):
               self.a = a
@@ -35,7 +35,7 @@ files:
       offset: 364
     initialized_from_dependency: false
     selected: true
-    status: Solved
+    status: Failed
     encrypted_possible_answer: |-
       def __init__(self, r):
               self.r = r
@@ -80,8 +80,5 @@ files:
 - name: __init__.py
   visible: false
   learner_created: false
-status: Solved
-feedback:
-  message: Congratulations!
-  time: Wed, 29 Jun 2022 11:32:31 UTC
+status: Failed
 record: -1

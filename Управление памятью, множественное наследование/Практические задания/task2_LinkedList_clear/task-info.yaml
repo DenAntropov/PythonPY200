@@ -22,7 +22,7 @@ files:
       offset: 2357
     initialized_from_dependency: false
     selected: false
-    status: Solved
+    status: Failed
     encrypted_possible_answer: |-
       self.head = None
               self.tail = None
@@ -131,7 +131,7 @@ files:
       offset: 952
     initialized_from_dependency: false
     selected: true
-    status: Solved
+    status: Failed
     encrypted_possible_answer: |-
       def __del__(self):
               print("Вызван метод \"__del__\"")
@@ -172,8 +172,5 @@ files:
 
         # TODO переоределить метод __del__
   learner_created: false
-status: Solved
-feedback:
-  message: Congratulations!
-  time: Wed, 29 Jun 2022 15:26:28 UTC
+status: Failed
 record: -1

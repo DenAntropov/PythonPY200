@@ -21,7 +21,7 @@ files:
       offset: 351
     initialized_from_dependency: false
     selected: false
-    status: Solved
+    status: Failed
     encrypted_possible_answer: self._prev()
   - offset: 494
     length: 56
@@ -31,7 +31,7 @@ files:
       offset: 493
     initialized_from_dependency: false
     selected: true
-    status: Solved
+    status: Failed
     encrypted_possible_answer: self._prev = None if prev is None else weakref.ref(prev)
   text: |
     from typing import Any, Optional
@@ -228,8 +228,5 @@ files:
         ll.append(100)
         print(ll)
   learner_created: false
-status: Solved
-feedback:
-  message: Congratulations!
-  time: Wed, 29 Jun 2022 15:39:07 UTC
+status: Failed
 record: -1

@@ -39,7 +39,7 @@ def test_set():
     assert lst[1].value == 1
 
 
-def test_del():
+def test_del():  # fixme переписать под unittest
     lst = LinkedList()
     lst.append(1)
     lst.append(2)
@@ -292,7 +292,7 @@ def test_remove():
 
 
 def test_index():
-    lst = LinkedList()
+    lst = LinkedList([1, 2, 3])
     lst.append(1)
     lst.append(2)
     lst.append(3)
@@ -318,3 +318,4 @@ def test_index():
 
 if __name__ == "__main__":
     test_index()
+    # todo unittest

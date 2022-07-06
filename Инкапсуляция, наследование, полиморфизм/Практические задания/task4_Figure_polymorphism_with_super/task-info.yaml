@@ -17,7 +17,7 @@ files:
       offset: 388
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Failed
     encrypted_possible_answer: super().area()
   text: |
     class Rectangle:
@@ -51,5 +51,5 @@ files:
 - name: __init__.py
   visible: false
   learner_created: false
-status: Unchecked
+status: Failed
 record: -1

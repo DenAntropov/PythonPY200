@@ -16,7 +16,7 @@ files:
       offset: 94
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       class DriverFactoryMethod(ABC):
           @classmethod
@@ -31,7 +31,7 @@ files:
       offset: 578
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: SimpleFileFactoryMethod.get_driver()
   text: |
     from abc import ABC, abstractmethod
@@ -115,5 +115,5 @@ files:
         read_data = driver.read()
         print(read_data)
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1

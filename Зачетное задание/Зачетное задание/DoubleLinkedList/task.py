@@ -19,20 +19,22 @@ class LinkedList(MutableSequence):
             for value in data:
                 self.append(value)
 
-    def __getitem__(self, index):
-        if index >= 0:
-            current = self._head
-            while current is not None:
-                if index == 0:
-                    return current
-                index -= 1
-                current = current._next
-        raise IndexError("invalid index")
+    def __getitem__(self, index):  # todo test ll = LinkedList()  ll[100]
+        if not index >= 0:
+            raise IndexError("invalid index")
+
+        current = self._head
+        while current is not None:
+            if index == 0:
+                return current
+            index -= 1
+            current = current._next  # fixme либо getter либо public
 
     def __setitem__(self, key, value):
         self[key].value = value
 
     def __delitem__(self, key):
+        # todo удаление из пустого списка не отработает
         if key == 0:
             self._head = self._head._next
         else:
@@ -51,7 +53,7 @@ class LinkedList(MutableSequence):
 
     def __len__(self):
         k = 0
-        if self._head is None:
+        if self._head is None:  # fixme убрать этот кусок
             return k
         else:
             current = self._head
@@ -70,6 +72,7 @@ class LinkedList(MutableSequence):
 
     def __repr__(self):
         return "[{}]".format(", ".join(map(str, self)))
+        # todo return f'[{", ".join(map(str, self))}]'
 
     def insert(self, index, value):
         if index >= len(self):
@@ -123,10 +126,13 @@ class LinkedList(MutableSequence):
         i = self.index(value)
         del self[i]
 
-    def index(self, value):
+    def index(self, value, start=None, stop=None):
+        if start is not None:
+            raise NotImplemented("")
+
         current = self._head
         i = 0
-        while current is not None:
+        while current is not None:  # fixme for index, node in enumerate(self):
             if current.value == value:
                 return i
             i += 1
@@ -142,8 +148,9 @@ class DoubleLinkedList(LinkedList):
         def __str__(self):
             return str(self.value)
 
-    def __init__(self):
-        LinkedList.__init__(self)
+
+    # def __init__(self):  # fixme remove
+    #     LinkedList.__init__(self)
 
     def __delitem__(self, key):
         current = self[key]
