@@ -44,7 +44,7 @@ class DoubleLinkedNode(Node):
 
 
 if __name__ == "__main__":
-    list_ = [1, 2, 3]
+    list_ = [1, 2, 3, 4]
 
     ll = DoubleLinkedNode(list_)
     print(ll)

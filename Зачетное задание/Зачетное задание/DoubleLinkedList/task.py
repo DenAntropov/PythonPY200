@@ -193,7 +193,7 @@ class DoubleLinkedList(LinkedList):
 
 
 if __name__ == "__main__":
-    list_ = [1, 2, 3]
+    list_ = [1, 2, 3, 4]
 
     ll = LinkedList(list_)
     print(ll)

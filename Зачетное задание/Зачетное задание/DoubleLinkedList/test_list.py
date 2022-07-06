@@ -317,4 +317,4 @@ def test_index():
 
 
 if __name__ == "__main__":
-    test_get()
+    test_index()
