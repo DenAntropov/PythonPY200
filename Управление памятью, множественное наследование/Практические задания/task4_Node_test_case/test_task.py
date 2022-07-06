@@ -44,7 +44,7 @@ class TestCase(unittest.TestCase):  # TODO наследоваться от unitt
         self.assertEqual(expected_value, f"{node}")    # TODO проверить строковое представление
 
     def test_is_valid(self):
-        Node.is_valid(Node(5))
+        Node.is_valid(Node(0))
         Node.is_valid(None)     # TODO проверить метод is_valid при корректных узлах
 
         with self.assertRaises(TypeError):

@@ -16,7 +16,7 @@ files:
       offset: 701
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       def __init__(self, filename):
               self.filename = filename
@@ -28,7 +28,7 @@ files:
       offset: 764
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       def read(self) -> Iterable:
               with open(self.filename) as f:
@@ -41,7 +41,7 @@ files:
       offset: 817
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       def write(self, data: Iterable) -> None:
               with open(self.filename, "w") as f:
@@ -95,5 +95,5 @@ files:
 - name: __init__.py
   visible: false
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1

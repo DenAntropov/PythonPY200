@@ -17,7 +17,7 @@ files:
       offset: 628
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Failed
     encrypted_possible_answer: return str(self.value)
   - offset: 1325
     length: 68
@@ -28,7 +28,7 @@ files:
       offset: 1325
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Failed
     encrypted_possible_answer: |-
       for i in range(len(list_nodes) - 1):
               current_node = list_nodes[i]
@@ -88,5 +88,5 @@ files:
 - name: __init__.py
   visible: false
   learner_created: false
-status: Unchecked
+status: Failed
 record: -1

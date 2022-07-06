@@ -16,7 +16,7 @@ files:
       offset: 202
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Failed
     encrypted_possible_answer: super().__init__(name=name)
   text: |
     class Figure:
@@ -41,10 +41,5 @@ files:
 - name: __init__.py
   visible: false
   learner_created: false
-status: Unchecked
-feedback:
-  message: |-
-    No Python interpreter
-    For more information, see <a href="https://plugins.jetbrains.com/plugin/10081-edutools/docs/troubleshooting-guide.html#no_tests_have_run">the Troubleshooting guide</a>
-  time: Wed, 29 Jun 2022 10:02:32 UTC
+status: Failed
 record: -1

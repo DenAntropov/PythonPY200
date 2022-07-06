@@ -11,6 +11,14 @@ class LinkedList(MutableSequence):
         def __str__(self):
             return str(self.value)
 
+        @property
+        def next(self):
+            return self._next
+
+        @next.setter
+        def next(self, _next):
+            self._next = _next
+
     def __init__(self, data: Iterable = None):
         self._head = None
         self._tail = None
@@ -19,57 +27,60 @@ class LinkedList(MutableSequence):
             for value in data:
                 self.append(value)
 
-    def __getitem__(self, index):
-        if index >= 0:
-            current = self._head
-            while current is not None:
-                if index == 0:
-                    return current
-                index -= 1
-                current = current._next
-        raise IndexError("invalid index")
+    def __getitem__(self, index):  # todo test ll = LinkedList()  ll[100]
+        if not index >= 0:
+            raise IndexError("invalid index")
+
+        current = self._head
+        while current is not None:
+            if index == 0:
+                return current
+            index -= 1
+            current = current.next  # fixme либо getter либо public
 
     def __setitem__(self, key, value):
         self[key].value = value
 
     def __delitem__(self, key):
-        if key == 0:
-            self._head = self._head._next
-        else:
-            prev = self._head
-            current = self._head
-            while current is not None:
-                if key == 0:
-                    break
-                key -= 1
-                prev = current
-                current = current._next
-            if current:
-                prev._next = current._next
-                if current == self._tail:
-                    self._tail = prev
+        # todo raise TypeError
+        if not isinstance(key, int):
+            raise TypeError("Нецелочисленный индекс")
+
+        if not 0 <= key < len(self):
+            raise IndexError("Недопустимый индекс")
+
+        prev = self._head
+        current = self._head
+        while current is not None:
+            if key == 0:
+                break
+            key -= 1
+            prev = current
+            current = current.next
+        if current:
+            prev._next = current.next
+            if current == self._tail:
+                self._tail = prev
 
     def __len__(self):
         k = 0
-        if self._head is None:
-            return k
-        else:
-            current = self._head
-            while current is not None:
-                k += 1
-                current = current._next
-            return k
+        current = self._head
+        while current is not None:
+            k += 1
+            current = current.next
+        return k
 
     def __str__(self):
         current = self._head
         j = ''
         while current is not None:
             j += str(current) + " "
-            current = current._next
+            current = current.next
         return j
 
     def __repr__(self):
-        return "[{}]".format(", ".join(map(str, self)))
+        return f'[{", ".join(map(str, self))}]'
+        # todo return f'[{", ".join(map(str, self))}]'
 
     def insert(self, index, value):
         if index >= len(self):
@@ -87,7 +98,7 @@ class LinkedList(MutableSequence):
                         break
                     index -= 1
                     prev = current
-                    current = current._next
+                    current = current.next
                 if current:
                     prev._next = new_node
                     new_node._next = current
@@ -104,7 +115,7 @@ class LinkedList(MutableSequence):
         current = self._head
         while current is not None:
             yield current.value
-            current = current._next
+            current = current.next
 
     def __contains__(self, value):
         for val in self:
@@ -123,14 +134,17 @@ class LinkedList(MutableSequence):
         i = self.index(value)
         del self[i]
 
-    def index(self, value):
+    def index(self, value, start=None, stop=None):
+        if start is not None:
+            raise NotImplemented("")
+
         current = self._head
         i = 0
-        while current is not None:
+        while current is not None:  # fixme for index, node in enumerate(self):
             if current.value == value:
                 return i
             i += 1
-            current = current._next
+            current = current.next
         raise ValueError("invalid value")
 
 
@@ -142,22 +156,22 @@ class DoubleLinkedList(LinkedList):
         def __str__(self):
             return str(self.value)
 
-    def __init__(self):
-        LinkedList.__init__(self)
+    # def __init__(self):  # fixme remove
+    #     LinkedList.__init__(self)
 
     def __delitem__(self, key):
         current = self[key]
         if self._head == current:
-            self._head = self._head._next
+            self._head = self._head.next
             if self._head:
                 self._head._prev = None
         elif self._tail == current:
-            self._tail = self._tail._prev
+            self._tail = self._tail.prev
             if self._tail:
                 self._tail._next = None
         else:
-            current._prev._next = current._next
-            current._next._prev = current._prev
+            current.prev._next = current.next
+            current.next._prev = current.prev
 
     def insert(self, index, value):
         if index >= len(self):
@@ -184,7 +198,7 @@ class DoubleLinkedList(LinkedList):
         current = self._tail
         while current is not None:
             yield current.value
-            current = current._prev
+            current = current.prev
 
 
 if __name__ == "__main__":

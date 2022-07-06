@@ -19,7 +19,7 @@ files:
       offset: 371
     initialized_from_dependency: false
     selected: false
-    status: Solved
+    status: Failed
     encrypted_possible_answer: |-
       self.value = value
               self.next = next_
@@ -31,7 +31,7 @@ files:
       offset: 445
     initialized_from_dependency: false
     selected: true
-    status: Solved
+    status: Failed
     encrypted_possible_answer: |-
       def __repr__(self) -> str:
               return f"Node({self.value}, {self.next})"
@@ -43,7 +43,7 @@ files:
       offset: 552
     initialized_from_dependency: false
     selected: true
-    status: Solved
+    status: Failed
     encrypted_possible_answer: Node(1)
   - offset: 571
     length: 7
@@ -53,7 +53,7 @@ files:
       offset: 612
     initialized_from_dependency: false
     selected: true
-    status: Solved
+    status: Failed
     encrypted_possible_answer: Node(2)
   - offset: 601
     length: 11
@@ -64,7 +64,7 @@ files:
       offset: 675
     initialized_from_dependency: false
     selected: true
-    status: Solved
+    status: Failed
     encrypted_possible_answer: second_node
   text: |
     from typing import Any, Optional
@@ -97,8 +97,5 @@ files:
 - name: __init__.py
   visible: false
   learner_created: false
-status: Solved
-feedback:
-  message: Congratulations!
-  time: Wed, 29 Jun 2022 11:26:23 UTC
+status: Failed
 record: -1

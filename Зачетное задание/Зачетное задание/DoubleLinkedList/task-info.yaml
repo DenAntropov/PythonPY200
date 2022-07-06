@@ -3,11 +3,6 @@ files:
 - name: __init__.py
   visible: false
   learner_created: false
-- name: node.py
-  visible: true
-  text: |
-    ...
-  learner_created: false
 - name: tests/__init__.py
   visible: false
   learner_created: false
@@ -22,6 +17,14 @@ files:
         def test_add(self):
             ...
   learner_created: false
+- name: node.py
+  visible: true
+  text: |
+    ...
+  learner_created: false
+- name: test_list.py
+  visible: true
+  learner_created: true
 - name: task.py
   visible: true
   text: |
@@ -36,8 +39,5 @@ files:
     if __name__ == "__main__":
         ...
   learner_created: false
-- name: test_list.py
-  visible: true
-  learner_created: true
 status: Unchecked
 record: -1

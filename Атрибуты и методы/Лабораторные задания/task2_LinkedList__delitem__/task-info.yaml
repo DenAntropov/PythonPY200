@@ -19,7 +19,7 @@ files:
       offset: 1992
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Failed
     encrypted_possible_answer: |-
       if not isinstance(index, int):
                   raise TypeError()
@@ -34,7 +34,7 @@ files:
       offset: 2030
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Failed
     encrypted_possible_answer: |-
       if index == 0:
                   self.head = self.head.next
@@ -183,5 +183,5 @@ files:
             self.is_valid(next_)
             self.next = next_
   learner_created: false
-status: Unchecked
+status: Failed
 record: -1

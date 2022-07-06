@@ -10,7 +10,7 @@ files:
       length: 44
       offset: 0
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
     encrypted_possible_answer: |-
       class Glass:
@@ -44,11 +44,11 @@ files:
             self.assertEqual(material, glass.get_material(),
                              msg="Метод get_material должен возвращать материал стакана.")
   learner_created: false
-- name: __init__.py
-  visible: false
-  learner_created: false
 - name: tests/__init__.py
   visible: false
   learner_created: false
-status: Unchecked
+- name: __init__.py
+  visible: false
+  learner_created: false
+status: Solved
 record: -1
