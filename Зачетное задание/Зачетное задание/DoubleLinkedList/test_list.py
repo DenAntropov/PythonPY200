@@ -181,8 +181,8 @@ def test_contains():
     lst.append(1)
     lst.append(2)
     lst.append(3)
-    assert (1 in lst) == True
-    assert (4 in lst) == False
+    assert 1 in lst == True
+    assert 4 in lst == False
     lst = DoubleLinkedList()
     lst.append(1)
     lst.append(2)

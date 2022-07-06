@@ -115,11 +115,6 @@ class LinkedList(MutableSequence):
     def count(self, value):
         return sum(1 for val in self if val == value)
 
-    def pop(self, i):
-        val = self[i].value
-        del self[i]
-        return val
-
     def extend(self, other):
         for val in other:
             self.append(val)
